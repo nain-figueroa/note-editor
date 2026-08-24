@@ -1,5 +1,5 @@
 import styles from './SideBar.module.css';
-import '../styles/variables.css';
+import '../../../styles/variables.css';
 
 function SideBar() {
     return (

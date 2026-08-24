@@ -1,5 +1,5 @@
-import TitleBar from "./components/TitleBar";
-import Workspace from "./components/Workspace";
+import TitleBar from "./components/layout/titlebar/TitleBar";
+import Workspace from "./components/layout/workspace/Workspace";
 import styles from './App.module.css';
 
 export default function App() {

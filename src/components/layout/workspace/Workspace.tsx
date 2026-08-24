@@ -1,7 +1,7 @@
 import styles from './Workspace.module.css';
-import '../styles/variables.css';
-import SideBar from './SideBar';
-import EditorSpace from './EditorSpace';
+import '../../../styles/variables.css';
+import SideBar from '../sidebar/SideBar';
+import EditorSpace from '../editor-space/EditorSpace';
 
 function Workspace() {
     return (

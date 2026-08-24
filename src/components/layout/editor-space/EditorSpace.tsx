@@ -1,5 +1,5 @@
 import styles from './EditorSpace.module.css';
-import '../styles/variables.css';
+import '../../../styles/variables.css';
 
 function EditorSpace() {
     return (
