@@ -1,0 +1,14 @@
+.note-list {
+    display: flex;
+    flex-direction: column;
+
+    margin: 10px;
+}
+
+.note {
+    display: flex;
+
+    padding: 5px 10px;
+
+    background-color: var(--background-color);
+}

@@ -14,7 +14,17 @@
     background-color: var(--background-color-light);
 }
 
+.button-bar {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin: 5px;
+}
+
 .sidebar-footer {
+    display: flex;
+    justify-content: flex-end;
     margin-top: auto;
 
     color: black;
