@@ -1,0 +1,9 @@
+.workspace {
+    display: flex;
+    flex: 1;
+
+    padding: 5px;
+    padding-top: 0;
+
+    background-color: var(--background-color, black);
+}

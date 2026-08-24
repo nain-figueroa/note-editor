@@ -8,12 +8,11 @@ if (started) {
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    show: false,
     titleBarStyle: 'hidden',
     titleBarOverlay: {
-      color: '#fefdfd',
-      symbolColor: '#030000',
+      color: '#838282',
+      symbolColor: '#e3e3e3',
       height: 32
     },
     webPreferences: {
@@ -21,6 +20,12 @@ const createWindow = () => {
       contextIsolation: true,
       nodeIntegration: false,
     },
+  });
+
+  mainWindow.setMenuBarVisibility(false);
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.maximize();
+    mainWindow.show();
   });
 
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
@@ -31,7 +36,6 @@ const createWindow = () => {
     );
   }
 
-  mainWindow.setMenuBarVisibility(false);
 };
 
 app.on('ready', createWindow);

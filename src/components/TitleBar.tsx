@@ -1,4 +1,5 @@
 import styles from './TitleBar.module.css';
+import '../styles/variables.css';
 
 function TitleBar() {
     return (

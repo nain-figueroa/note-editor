@@ -1,0 +1,12 @@
+.editor-space {
+    flex: 7;
+    margin: 2px;
+
+    background-color: var(--background-color-strong);
+}
+
+.notes-opened {
+    padding: 2px 0;
+    color: black;
+    background-color: var(--background-color-light);
+}
