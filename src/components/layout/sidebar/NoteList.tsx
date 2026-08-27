@@ -3,13 +3,11 @@ import styles from './NoteList.module.css';
 
 type Props = {
     notes: Note[];
+    openNotes: Note[];
+    addOpenNote: (notes: Note[]) => void;
 };
 
-function openNote(note: Note) {
-    console.log('nota abierta: ' + note.name);
-}
-
-function NoteList({ notes }: Props) {
+function NoteList({ notes, openNotes, addOpenNote }: Props) {
     if (notes.length === 0) {
         return <p>No hay notas aún</p>;
     }
@@ -17,7 +15,7 @@ function NoteList({ notes }: Props) {
     return (
         <div className={styles['note-list']}>
             {notes.map((note) => (
-                <div key={note.id} className={styles.note} onClick={(e) => openNote(note)}>
+                <div key={note.id} className={styles.note} onClick={(e) => addOpenNote([...openNotes, note])}>
                     <p style={{ margin: 0 }}>{note.name}</p>
                 </div>
             ))

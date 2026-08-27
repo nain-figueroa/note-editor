@@ -3,11 +3,12 @@
 
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 
     height: 32px;
 
     background: var(--background-color, black);
 
-    padding-left: 12px;
+    padding-left: 1.5rem;
     padding-right: 140px;
 }

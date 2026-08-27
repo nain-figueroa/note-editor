@@ -1,0 +1,10 @@
+.note-tab {
+    display: flex;
+
+    width: fit-content;
+
+
+    background-color: var(--background-color-strong);
+    padding: 5px;
+    margin-left: 5px;
+}

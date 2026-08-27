@@ -6,10 +6,15 @@ import { useState } from 'react';
 import Note from '../../shared/types/note';
 import NoteList from './NoteList';
 
-function SideBar() {
+type Props = {
+    openNotes: Note[];
+    addOpenNote: (notes: Note[]) => void;
+};
+
+function SideBar({ openNotes, addOpenNote }: Props) {
     const [notes, setNote] = useState<Note[]>([
-        { id: 1, name: 'Goku', path: 'ruta/a/nota', creation_date: new Date(), modification_date: new Date() },
-        { id: 2, name: 'Tangamandapio', path: 'ruta/a/nota', creation_date: new Date(), modification_date: new Date() },]
+        { id: 1, name: 'Goku', path: 'home/najinbuu/note-editor/fake-data/Goku.txt', creation_date: new Date(), modification_date: new Date() },
+        { id: 2, name: 'Tangamandapio', path: 'home/najinbuu/note-editor/fake-data/Goku.txt', creation_date: new Date(), modification_date: new Date() },]
     );
 
 
@@ -28,7 +33,7 @@ function SideBar() {
                 <IconButton icon={<Plus size={18} />} label='Add Note' onClick={AddNote} />
                 <IconButton icon={<Folder size={18} />} label='Add Group' onClick={AddGroup} />
             </div>
-            <NoteList notes={notes} />
+            <NoteList notes={notes} openNotes={openNotes} addOpenNote={addOpenNote} />
             <footer className={styles['sidebar-footer']}>
                 <IconButton icon={<MailQuestionMark size={18} />} label='Add Group' onClick={viewProgramInfo} />
                 <IconButton icon={<Settings size={18} />} label='Add Group' onClick={openSettings} />

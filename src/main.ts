@@ -36,6 +36,7 @@ const createWindow = () => {
     );
   }
 
+  mainWindow.setMinimumSize(800, 600);
 };
 
 app.on('ready', createWindow);

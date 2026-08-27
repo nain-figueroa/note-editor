@@ -1,0 +1,21 @@
+.note-view {
+    display: block;
+    flex: 1;
+
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.note-editor {
+    field-sizing: content;
+
+    width: 50vw;
+    max-width: 50vw;
+
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.title {
+    margin-top: 100px;
+}

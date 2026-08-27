@@ -98,3 +98,5 @@ out/
 # Editor
 .vscode/
 .idea/
+
+fake-data/
